@@ -7,29 +7,26 @@ public class Prime {
 
     public static void main(String... args){
         
-        int n,status=0;
+        int status=0;
 
         System.out.println("Enter the number: ");
 
-        Scanner sc = new  Scanner(System.in);
-        n=sc.nextInt();
-        for(int i=2;i<n;i++)
+        Scanner input = new  Scanner(System.in);
+        int n = input.nextInt();
+        for(int i=2;i<n/2;i++)
         {
-            if(n%2==0)
-                status = status+1;
-        }
-        if(status>2)
-        {
-            System.out.println("Number is not prime");
+            if(n%i==0) {
 
+               status = 1;
+               break;
+            }
+        } if(status != 0 && n <= 1) {
+            System.out.println("is not a prime number");
         }
-        else
-        {
-            System.out.println("Number is Prime");
-        }
+            else 
+            {
+                System.out.println("is not a prime number");
+            }
     
-    
-
-        
-    }
+}
 }
